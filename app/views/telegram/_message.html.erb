@@ -1,0 +1,12 @@
+<div class="message_row">
+	<% if message[:is_admin] == true %>
+		<div class="message_box_for_admin">
+			<%= message[:text] %>
+		</div>
+	<% else %>
+		<div class="message_box">
+			<%= message[:text] %>
+		</div>
+	<% end %>
+</div>
+

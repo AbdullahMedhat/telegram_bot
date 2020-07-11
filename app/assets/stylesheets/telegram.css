@@ -1,0 +1,84 @@
+.chat_container{
+	background-color: #DCDCDC;
+	margin: 2px;
+	width: 100%;
+	height: 90%;
+}
+
+.chat_names{
+	width: 28%;
+	background-color: #A9A9A9;
+	height: 100%;
+	display: inline-block;
+	float: left;
+	padding: 3%;
+	overflow: auto;
+}
+
+#chat_history{
+	width: 70%;
+	background-color: #A9A9A9;
+	height: 100%;
+	display: inline-block;
+	float: right;
+	padding: 3%;
+}
+.chat_history{
+	overflow: auto;
+	width: 100%;
+	display: block;
+}
+.chat_body_container > .message_row:last-child{
+	margin-bottom: 0;
+}
+.chat_id_box{
+	background-color: white;
+	padding: 5%;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.chat_body_container{
+	background-color: white;
+	width: 100%;
+	height: 80%;
+	padding: 2% 5%;
+	overflow: auto;
+
+}
+.message_row{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+.message_box{
+	width: auto;
+	background-color: #A9A9A9;
+	display: block;
+	padding: 1% 3%;
+	float: left;
+}
+
+.message_box_for_admin{
+	width: auto;
+	background-color: #E5E500;
+	display: block;
+	padding: 1% 3%;
+	float: right;
+}
+
+.admin_send_message{
+	width: 100%;
+}
+.admin_send_message textarea{
+	width: 80%;
+	height: 80px;
+	float: left;
+	padding: 10px;
+}
+
+.admin_send_message input[type="submit"]{
+	width: 15%;
+	height: 80px;
+	float: right;
+}

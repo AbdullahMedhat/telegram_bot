@@ -1,0 +1,24 @@
+<div>
+	<% @chats.each do |chat| %>
+		<div class="chat_id_box" id="<%= chat.keys.first %>" onclick="get_chat_body(<%= chat.keys.first %>)">
+			User name: <%= chat[chat.keys.first].first['from']['first_name'] %>
+			<br/ >
+			User ID: <%= chat[chat.keys.first].first['from']['id'] %>
+		</div>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+	function get_chat_body(chat_id){
+		$.ajax(
+			{
+				url: '/telegram/get_chat_history?chat_id=' + chat_id,
+				type: 'get',
+				success: function(result){
+					var element = document.getElementById('d' + chat_id);
+					element.scrollTop = element.scrollHeight;
+				}
+			}
+		);
+	}
+</script>

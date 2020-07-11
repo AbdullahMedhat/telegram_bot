@@ -1,0 +1,5 @@
+var element = $("#d" + "<%= @chat_id %>")
+element.append("<%= j render partial: 'telegram/message', locals: { message: @message } %>");
+element.scrollTop = element.scrollHeight;
+
+$("#chat_content").val(' ')

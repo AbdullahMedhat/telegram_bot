@@ -1,0 +1,14 @@
+<div class="chat_body_container" id="d<%= params[:chat_id] %>" >
+	<% @messages.each do |message| %>
+		<%= render partial: 'telegram/message', locals: {  message: message.symbolize_keys } %>
+	<% end %>
+</div>
+<br />
+
+<div class="admin_send_message">
+	<%= form_with(url: 'telegram/replay_to_conversation', method: 'post', remote: true) do %>
+	  <%= text_area_tag(:chat_content) %>
+	  <%= text_field_tag :chat_id, params[:chat_id], hidden: true %>
+	  <%= submit_tag('Send') %>
+	<% end %>
+</div>
