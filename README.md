@@ -1,24 +1,14 @@
-# README
+#STEPS TO RUN THE PROJECT
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+	## git clone git@github.com:AbdullahMedhat/telegram_bot.git
+	## cd telegram_bot/ and RUN bundle install
 
-Things you may want to cover:
 
-* Ruby version
+	> RUN yarn install --check-files
+	> RUN 	./bin/setup
+	> Start redis-server 'redis-server'
+	> Start telegram poller 'rails telegram:bot:poller'
+	> RUN the server 'rails s'
+	> 'rspec' to run all tests
+	> to add or change bot credentials 'EDITOR=youreditorname credentials:edit'
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
